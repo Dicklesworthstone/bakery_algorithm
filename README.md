@@ -1,8 +1,11 @@
-# Lamport's Bakery Algorithm Demonstrated in Python
+# Lamport's Bakery Algorithm, Demonstrated in Python
 
 The Bakery Algorithm was invented by Leslie Lamport in 1974 (Original paper at [https://lamport.azurewebsites.net/pubs/bakery.pdf] ).
 
-It is a locking mechanism used in concurrent programming to prevent multiple processes from entering their critical sections simultaneously, which could cause data corruption or inconsistencies. It's named after the numbering system used in bakeries, where each customer gets a number and waits for their turn to be served.
+It's a locking mechanism used in concurrent programming to prevent multiple processes from entering their critical sections simultaneously, which could cause data corruption or inconsistencies. It's named after the numbering system used in bakeries, where each customer gets a number and waits for their turn to be served.
+
+![Realistic Illustration](https://raw.githubusercontent.com/Dicklesworthstone/bakery_algorithm/main/bakery_illustration.webp)
+
 
 ## How It Works
 
@@ -40,7 +43,7 @@ Since the algorithm doesn't rely on atomicity, different processes may have inco
 
 ## A Demonstration in Python
 
-The following Python code attempts to demonstrate how this algorithm works. This is somewhat challenging given Python's Global Interpreter Lock (GIL), which prevents true parallelism. However, we can still simulate the algorithm's behavior by introducing delays in the code and by using multiple processes.
+The following Python code attempts to demonstrate how this algorithm works. This is somewhat challenging given Python's Global Interpreter Lock (GIL), which prevents true parallelism. However, we can still simulate the algorithm's behavior by introducing delays in the code and by using multiple processes:
 
 ```python
 
@@ -129,3 +132,7 @@ if __name__ == "__main__":
 
 
 ```
+
+Here is what it looks like running:
+
+![Screenshot](https://github.com/Dicklesworthstone/bakery_algorithm/blob/main/bakery_screenshot.png) 
